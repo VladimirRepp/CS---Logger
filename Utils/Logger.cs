@@ -34,6 +34,7 @@ namespace Vladimir_Fps.Utils
         private LogLevel _minimumLogLevel;
         private readonly HashSet<OutputPort> _outputPorts;
 
+        public string LogFilePath => _logFilePath;
         public event Action<string> OnLogMessage;
 
         // Порты вывода
@@ -225,3 +226,4 @@ namespace Vladimir_Fps.Utils
     */
     #endregion
 }
+
