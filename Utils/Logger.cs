@@ -34,7 +34,7 @@ namespace Vladimir_Fps.Utils
         private LogLevel _minimumLogLevel;
         private readonly HashSet<OutputPort> _outputPorts;
 
-        public string LogFilePath => _logFilePath;
+        public string LogFilePath { get => _logFilePath; set => _logFilePath = value; }
         public event Action<string> OnLogMessage;
 
         // Порты вывода
@@ -116,6 +116,12 @@ namespace Vladimir_Fps.Utils
         /// Получение текущего пути к файлу лога
         /// </summary>
         public string GetCurrentLogPath() => _logFilePath;
+
+        /// <summary>
+        /// Задать новый путь к файлу лога
+        /// </summary>
+        /// <param name="new_path"></param>
+        public void SetCurrentLogPath(string new_path) => _logFilePath = new_path;
 
         #endregion
 
@@ -226,4 +232,5 @@ namespace Vladimir_Fps.Utils
     */
     #endregion
 }
+
 
